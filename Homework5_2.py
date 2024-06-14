@@ -7,5 +7,4 @@ class House():
         print(f'Number of floors: {self.numberOfFloors}')
 
 h1 = House()
-print(h1.numberOfFloors)
 h1.setNewNumberOfFloors(5)
