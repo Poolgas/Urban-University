@@ -1,20 +1,20 @@
 class Vehicle:
     __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 
-    def __init__(self, owner, __model, __color, __engine_power):
+    def __init__(self, owner, model, color, engine_power):
         self.owner = str(owner)
-        self.model = str(__model)
-        self.engine_power = int(__engine_power)
-        self.color = str(__color)
+        self.__model = str(model)
+        self.__engine_power = int(engine_power)
+        self.__color = str(color)
 
     def get_model(self):
-        print(f'Модель: {self.model} ')
+        print(f'Модель: {self.__model} ')
 
     def get_horsepower(self):
-        print(f'Мощность двигателя: {self.engine_power} ')
+        print(f'Мощность двигателя: {self.__engine_power} ')
 
     def get_color(self):
-        print(f'Цвет: {self.color}')
+        print(f'Цвет: {self.__color}')
 
     def get_owner(self):
         print(f'Владелец: {self.owner}')
@@ -25,7 +25,7 @@ class Vehicle:
     def set_color(self, new_color):
         self.n_color = str(new_color)
         if self.n_color.lower() in Vehicle.__COLOR_VARIANTS:
-            self.color = self.n_color
+            self.__color = self.n_color
 
         else:
             print(f'Невозможно покрасить в {self.n_color}')
