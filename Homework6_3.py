@@ -32,7 +32,7 @@ class Pegasus(Horse, Eagle):
         return (self.x_distance, self.y_distance)
 
     def voice(self):
-        print(Eagle(self.sound))
+        print(self.sound)
 
 p1 = Pegasus()
 
