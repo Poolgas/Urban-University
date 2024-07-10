@@ -5,7 +5,7 @@ def custom_write(file_name: str, strings: list):
     strings_position = dict()
     for i in range(len(strings)):
         strings_position[i + 1, file.tell()] = strings[i]
-        file.write(f'{strings[i]}\r\n')
+        file.write(f'{strings[i]}\n')
     file.close()
     return strings_position
 
