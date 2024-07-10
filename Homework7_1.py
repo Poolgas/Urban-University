@@ -11,7 +11,10 @@ class Product():
 class Shop():
     def __init__(self):
         self.__file_name = 'products.txt'
-
+        '''Создает пустой текстовый документ'''
+        products = open(self.__file_name, 'a')
+        products.close()
+        
     def get_products(self):
         file_r = open(self.__file_name, 'r')
         return file_r.read()
