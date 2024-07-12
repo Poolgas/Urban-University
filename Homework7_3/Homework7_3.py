@@ -55,7 +55,6 @@ class WordsFinder():
                 find_dict[name] = words.index(word) + 1
             else:
                 print(f'Слова {word} нету в файлах')
-
         return find_dict
 
     def count(self, word):
@@ -63,7 +62,6 @@ class WordsFinder():
         for name, words in self.get_all_words().items():
             word = word.lower()
             count_dict[name] = words.count(word)
-
         return count_dict
 
 finder2 = WordsFinder('test_file.txt')
