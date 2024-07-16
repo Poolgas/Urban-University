@@ -23,7 +23,7 @@ print(add_everything_up(123.456, 7))
 
 def add_everything_up(a, b):
     try:
-        if isinstance(a, str) and isinstance(b, str):
+        if type(a) is type(b):
             return a + b
         elif isinstance(a, (float, int)) and isinstance(b, (float, int)):
             return ('{:.3f}'.format(a + b))
