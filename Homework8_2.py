@@ -56,8 +56,9 @@ def personal_sum(numbers):
 
 def calculate_average(numbers):
     avg = 0
-    try:
-        avg = personal_sum(numbers)[0] / (len(numbers) - personal_sum(numbers)[1])
+        try:
+        result_personal_sum = personal_sum(numbers)
+        avg = result_personal_sum[0] / (len(numbers) - result_personal_sum[1])
     except ZeroDivisionError:
         return 0
     except TypeError:
