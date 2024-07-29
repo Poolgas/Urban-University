@@ -69,11 +69,11 @@ from random import choice
 
 class MysticBall():
     def __init__(self, *words):
-        self.words = {words}
+        self.words = words
 
     def __call__(self):
-        for word in self.words:
-            return choice(word)
+        # for word in self.words:
+        return choice(self.words)
 
 
 first_ball = MysticBall('Да', 'Нет', 'Наверное')
