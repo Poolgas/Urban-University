@@ -69,10 +69,10 @@ res_func = time_end_func - time_start_func
 print(f"Работа функций {res_func}.")
 
 time_start_threads = datetime.now()
-thr_five = Thread(target=wite_words, args=(10, 'example5.'))
-thr_six = Thread(target=wite_words, args=(30, 'example6.'))
-thr_seven = Thread(target=wite_words, args=(200, 'example7.'))
-thr_eight = Thread(target=wite_words, args=(100, 'example8.'))
+thr_five = Thread(target=wite_words, args=(10, 'example5.txt'))
+thr_six = Thread(target=wite_words, args=(30, 'example6.txt'))
+thr_seven = Thread(target=wite_words, args=(200, 'example7.txt'))
+thr_eight = Thread(target=wite_words, args=(100, 'example8.txt'))
 
 thr_five.start()
 thr_six.start()
