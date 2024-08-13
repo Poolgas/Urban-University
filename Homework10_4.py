@@ -101,7 +101,6 @@ class Guest(Thread):
 
     def run(self):
         sleep(randint(3, 10))
-        # print(f'{self.name} закончил приём пищи')
 
 
 class Cafe:
