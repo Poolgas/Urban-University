@@ -76,7 +76,7 @@ async def update_user(
 async def delete_user(
         user_id: int = Path(ge=0, le=300, description='Enter user_id', example='1')) -> User:
     try:
-        user = next((u for u in users if u.id == user_id), None)
+        user = next((u for u in users if u.id == user_id))
         users.remove(user)
         return user
     except ValueError:
