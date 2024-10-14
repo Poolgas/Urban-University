@@ -68,7 +68,7 @@ async def update_user(
         user.username = username
         user.age = age
         return user
-    except Exception:
+    except StopIteration:
         raise HTTPException(status_code=404, detail="User was not found")
 
 
@@ -79,5 +79,5 @@ async def delete_user(
         user = next((u for u in users if u.id == user_id))
         users.remove(user)
         return user
-    except ValueError:
+    except StopIteration:
         raise HTTPException(status_code=404, detail="User was not found")
