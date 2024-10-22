@@ -69,9 +69,8 @@ async def update_user(
         , age: Annotated[int, Path(ge=18, le=120, description='Enter age', example=30)]) -> User:
     try:
         user = next((u for u in users if u.id == user_id))
-        user.username = username
-        user.age = age
-        return user
+        users[user_id-1] = User(id=user.id, username=username, age=age)
+        return users[user_id]
     except StopIteration:
         raise HTTPException(status_code=404, detail="User was not found")
 
