@@ -26,7 +26,7 @@ async def task_by_id(
 ):
     task = db.scalar(select(Task).where(task_id == Task.id))
     if task is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='User was not found')
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Task was not found')
     return task
 
 
